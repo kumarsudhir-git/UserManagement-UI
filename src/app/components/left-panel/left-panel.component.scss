@@ -1,0 +1,56 @@
+.left-panel {
+  width: 220px;
+  min-height: 100vh;
+  background: #1976d2;
+  color: #fff;
+  padding: 2rem 1rem 1rem 1rem;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.04);
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+  }
+
+  li {
+    margin-bottom: 1.2rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+
+  a.active-link,
+  a:hover {
+    background: #1565c0;
+  }
+
+  .logout-btn {
+    width: 100%;
+    background: #d32f2f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: background 0.2s;
+  }
+  .logout-btn:hover {
+    background: #b71c1c;
+  }
+}

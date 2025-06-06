@@ -1,0 +1,53 @@
+<h2>Order Management</h2>
+<form (ngSubmit)="fetchOrderDetails()" #orderForm="ngForm" class="order-form">
+  <label for="orderNumber">Order Number <span style="color:red">*</span></label>
+  <input
+    id="orderNumber"
+    name="orderNumber"
+    type="text"
+    [(ngModel)]="orderNumber"
+    required
+    class="order-input"
+    placeholder="Enter order number"
+  />
+  <button type="submit" [disabled]="!orderForm.form.valid">Submit</button>
+</form>
+
+<table *ngIf="orderDetails" class="order-table">
+  <tr>
+    <th>Field</th>
+    <th>Value</th>
+  </tr>
+  <tr *ngFor="let key of orderDetailKeys()">
+    <td>{{ key }}</td>
+    <td>{{ orderDetails[key] }}</td>
+  </tr>
+</table>
+
+<h2>Order List</h2>
+
+<a routerLink="/order/new">Add Order</a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Customer</th>
+      <th>Date</th>
+      <th>Total</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.id }}</td>
+      <td>{{ order.customerName }}</td>
+      <td>{{ order.orderDate }}</td>
+      <td>{{ order.totalAmount }}</td>
+      <td>
+        <a [routerLink]="['/order/edit', order.id]">Edit</a>
+        <button (click)="deleteOrder(order.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

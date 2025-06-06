@@ -1,0 +1,7 @@
+<div *ngIf="showLayout" class="main-layout">
+  <app-left-panel></app-left-panel>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<router-outlet *ngIf="!showLayout"></router-outlet>

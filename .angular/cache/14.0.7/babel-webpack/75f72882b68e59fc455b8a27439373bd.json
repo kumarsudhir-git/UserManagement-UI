@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class LeftPanelComponent {\n  constructor() {} // Method to handle navigation to order list\n\n\n  navigateToOrderList() {// Logic to navigate to order list\n  } // Method to handle navigation to order details\n\n\n  navigateToOrderDetails(orderId) {// Logic to navigate to order details\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

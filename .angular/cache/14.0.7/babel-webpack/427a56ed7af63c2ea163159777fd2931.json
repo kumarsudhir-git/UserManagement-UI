@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class AppComponent {\n  constructor() {\n    this.title = 'Order Management System';\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
